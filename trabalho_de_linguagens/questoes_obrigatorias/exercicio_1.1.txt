@@ -1,3 +1,11 @@
+{- Veja logo abaixo o programa que a maquina de pilha tenta reproduzir
+    
+    int x = 10, y = 1;
+    int z = 2x*x _ 4*x + 2;
+    boolean w = z == y;
+-}
+
+
 start : push 10
         push 'x'
         store

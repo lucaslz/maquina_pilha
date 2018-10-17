@@ -1,3 +1,14 @@
+{- Veja logo abaixo o programa que a maquina de pilha tenta reproduzir
+    
+    int foo (int n) {
+        int x = 2;
+        while(x > 0) {
+            x = x * 2;
+        }
+        return n;
+    }
+-}
+
 start : push 0 -- Inicializando o metodo com o valor 0
         push 3000 -- alocando memoria para a funcao que retornara um inteiro 'foo'
         store

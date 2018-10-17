@@ -1,3 +1,13 @@
+{- Veja logo abaixo o programa que a maquina de pilha tenta reproduzir
+    
+    void foo (char *g, int n) {
+        int i;
+        for (i = 0; i < n; i++){
+            print(g[i]);
+        }
+    }
+-}
+
 start : push 0 -- A funcao e void mas preciso inicializa-la mesmo que ela nao retorne nada
         push 3000 -- alocando memoria para a funcao que retornara um inteiro 'foo'
         store
