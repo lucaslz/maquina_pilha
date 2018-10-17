@@ -18,23 +18,29 @@ foo : push 'p' -- Contera o valor do ponteiro
       push 0
       eq
       jumpt start
+      halt
 
-while : push 'n'
+while : push 'i'
         addi
-        push 'i'
+        push 'n'
+        push 0
         eq
         jumpt end
 
-loop : push 0
-       push 'i' -- iniciado a variavel i
+loop : push 0 -- Inicializando endereco de memoria
+       push 'p'
        store
        push 0
-       eq
-       jumpt while
-       push 'p' -- Variavel que aponta para para outro espaço na memoria
-       putch
-       push 0 
+       eq 
+       jumpt printf
+       push 0
        eq
        jumpt loop
+
+printf : push 0
+         eq
+         jumpt while
+         push 'p'
+         putch
 
 end : halt -- Finalizando o loop de wilhe
