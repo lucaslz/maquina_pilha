@@ -1,0 +1,29 @@
+{-
+    Definindo a chamada de uma funcao de maneira formal e generica
+
+    Regras:
+
+        1 => A chamada de um funcao independe de tipo
+        2 => A chamada de uma funcao independe de seu retorno
+        3 => A chamada de uma funcao que retorna algo independe de atribuicao
+
+    Autor: Lucas Teotonio Lima
+    Matricula: 15.1.5902    
+-}
+
+-- Irei simular a chamada de uma funcao dentro da funcao main
+
+main : push 0
+       push 'm' -- inicializando variavel de retorno do int main
+       store
+       push 0
+       eq
+       jumpt funcao
+       push 'r' -- Pegando o retorno da funcao
+       putch -- Caso a funcao retorne alguma coisa sera imprimido
+       halt
+
+funcao : push 0 -- Inicializando parametros da funcao
+         push 'a' -- parametros
+         store -- Gravando o resultado das operacoes da funcao na memoria
+         halt

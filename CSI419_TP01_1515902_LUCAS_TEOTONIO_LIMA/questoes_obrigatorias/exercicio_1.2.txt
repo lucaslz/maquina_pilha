@@ -1,5 +1,8 @@
 {- Veja logo abaixo o programa que a maquina de pilha tenta reproduzir
-    
+
+    Autor: Lucas Teotônio Lima
+    Matricula: 15.1.5902
+
     int i;
     int n = 20;
     int x[20];

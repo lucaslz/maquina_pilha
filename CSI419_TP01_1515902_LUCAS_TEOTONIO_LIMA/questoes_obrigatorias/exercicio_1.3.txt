@@ -1,5 +1,8 @@
 {- Veja logo abaixo o programa que a maquina de pilha tenta reproduzir
-    
+
+    Autor: Lucas Teotônio Lima
+    Matricula: 15.1.5902    
+
     int foo (int n) {
         int x = 2;
         while(x > 0) {

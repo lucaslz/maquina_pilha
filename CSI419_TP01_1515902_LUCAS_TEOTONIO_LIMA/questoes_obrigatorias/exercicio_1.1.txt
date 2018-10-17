@@ -1,5 +1,8 @@
 {- Veja logo abaixo o programa que a maquina de pilha tenta reproduzir
     
+    Autor: Lucas Teotônio Lima
+    Matricula: 15.1.5902
+
     int x = 10, y = 1;
     int z = 2x*x _ 4*x + 2;
     boolean w = z == y;
