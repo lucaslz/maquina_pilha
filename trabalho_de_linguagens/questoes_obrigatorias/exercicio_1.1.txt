@@ -1,0 +1,26 @@
+start : push 10
+        push 'x'
+        store
+        push 1
+        push 'y'
+        store
+operacao :  push 2
+            push 2
+            push 10
+            multi
+            push 10
+            multi
+            subi
+            push 4
+            push 10
+            multi
+            push 2
+            addi
+            push 'z'
+            store
+            push 42
+            push 1
+            eq
+            push 'w'
+            store
+            halt

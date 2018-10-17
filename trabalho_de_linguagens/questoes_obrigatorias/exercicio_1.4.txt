@@ -1,0 +1,40 @@
+start : push 0 -- A funcao e void mas preciso inicializa-la mesmo que ela nao retorne nada
+        push 3000 -- alocando memoria para a funcao que retornara um inteiro 'foo'
+        store
+        push 0
+        eq
+        jumpt foo
+        push 3000 -- atribuindo a funcao a seu espaço na memoria
+        store
+        halt
+
+foo : push 'p' -- Contera o valor do ponteiro
+      push 0
+      push 'n'
+      store
+      push 0
+      eq
+      jumpt loop -- chamado o loop para imprimir os dados
+      push 0
+      eq
+      jumpt start
+
+while : push 'n'
+        addi
+        push 'i'
+        eq
+        jumpt end
+
+loop : push 0
+       push 'i' -- iniciado a variavel i
+       store
+       push 0
+       eq
+       jumpt while
+       push 'p' -- Variavel que aponta para para outro espaço na memoria
+       putch
+       push 0 
+       eq
+       jumpt loop
+
+end : halt -- Finalizando o loop de wilhe

@@ -1,0 +1,36 @@
+start : push 0 -- Inicializando o metodo com o valor 0
+        push 3000 -- alocando memoria para a funcao que retornara um inteiro 'foo'
+        store
+        push 0
+        eq
+        jumpt foo
+        push 3000 -- Atribuindo a chamada da funcao no seu local de memoria
+        store
+        halt
+
+foo : push 0 -- Inicializando o parametro da funcao
+      push 'n' -- veriavel que ficara no cabecalho da funcao
+      store
+      push 2 -- Valor da variavel que esta dentro do escopo da funcao
+      push 'x' -- Variavel que estara dentro do escopo da funcao
+      store
+      push 0
+      eq
+      jumpt while
+      push 2
+      push 'x'
+      multi
+      push 'x'
+      store
+      push 0 
+      eq
+      jumpt start
+
+while : push 0
+        push 'n'
+        store
+        push 0
+        gt
+        jumpt end
+
+end : halt -- Terminando o laco

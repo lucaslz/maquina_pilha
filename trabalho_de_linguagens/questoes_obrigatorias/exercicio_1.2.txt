@@ -1,0 +1,35 @@
+start : push 0
+        push 'i'
+        store
+        push 20
+        push 'n'
+        store
+        push 0
+        push 1020 -- cedula de memoria para o vetor x na posicao 20 => x[20]
+        store
+        push 1
+        push 1000 -- cedula de memoria para o vetor x na posicao 0 => x[0]
+        store
+        push 1
+        push 1001 -- cedula de memoria para o vetor x na posicao 0 => x[1]
+        store
+
+loop :  push 0
+        eq
+        jumpt while
+        push 2001 -- cedula de memoria para o vetor na posicao i - 1 => x[i - 1]
+        push 2002 -- cedula de memoria para o vetor na posicao i - 2 => x[i - 2]
+        addi
+        push 2000 -- cedula de memoria para o vetor na posicao i => x[i]
+        store
+        push 0
+        eq
+        jumpt loop -- if i > n o programa para e não soma mais na no vetor
+
+while : push 'n'
+        addi
+        push 'i'
+        eq
+        jumpt end
+
+end : halt  -- quanto chegar no criterio de parada o programa ira parar
